@@ -1,9 +1,59 @@
 package com.example;
 
 public class Cliente {
+    private String cpf;
+    private String nome;
     private double renda;
     private char sexo;
     private int anoNascimento;
+    private boolean especial;
+    private String cidade;
+    
+
+     public Cliente(){
+        System.out.println("criando um cliente sem parametros!");
+        double aleatorio = Math.random();
+        if (aleatorio >= 0.5)
+            especial = true;
+    }
+
+
+    public Cliente (double renda, char sexo){
+        this();
+        System.out.println("criando um cliente com parametros!");
+        setRenda(renda);
+        this.sexo = sexo;
+       
+    }
+    public String getCidade() {
+        return cidade;
+    }
+    
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+    public String getCpf() {
+        return cpf;
+    }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        if (nome.isBlank()) {
+            System.out.println("nome não pode ser vazio!");
+        }
+        else this.nome = nome.toUpperCase().trim();
+    }
+    public boolean isEspecial() {
+        return especial;
+    }
+
+    public void setEspecial(boolean especial) {
+        this.especial = especial;
+    }
 
     public char getSexo() {
         return sexo;
