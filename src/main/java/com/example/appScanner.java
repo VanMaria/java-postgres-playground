@@ -2,6 +2,8 @@ package com.example;
 
 import java.util.Scanner;
 
+import com.example.model.Cliente;
+
 public class appScanner {
 
     public static void main (String[] args) {
