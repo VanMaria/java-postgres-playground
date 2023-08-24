@@ -21,6 +21,7 @@ public class MathUtilTest {
         int obtido = MathUtil.mdc(a,b);
 
         assertEquals(obtido,esperado);
+        // assertEquals(obtido,esperado);
     }
 
     @Test
