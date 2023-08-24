@@ -56,7 +56,13 @@ public class App {
             //var sql = "select * from estado where uf = '" + uf + "'"; //suscetível a SQL Injection
             var sql = "select * from estado where uf = ?";
             var statement = conn.prepareStatement(sql);
-            //System.out.println(sql);
+            /*
+            var statement2 = conn.prepareStatement(sql);
+            statement2.setString(1,uf);
+            var result2 = statement2.executeQuery();
+            System.out.printf("id estado ",result2.getInt("id"),result2.getString("nome"));
+            */
+            //System.out.(sql);
             statement.setString(1, uf);
             var result = statement.executeQuery();
             if(result.next()){

@@ -16,4 +16,7 @@ public class MathUtil {
         //return 0;
         throw new UnsupportedOperationException("Não foi possivel calcular o mdc dos números");
     }
+    static int soma (int a, int b) {
+        return a+b;
+    }
 }

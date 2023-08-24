@@ -17,11 +17,11 @@ public class ProdutoDao {
         try (var statement = conn.prepareStatement(sql)) {
             statement.setLong(1,id);
            if ( statement.executeUpdate()==1) {
-                System.out.println("Produto excluido com sucesso");
+                System.out.println("Produto excluído com sucesso");
              } else System.out.println("Produto não localizado");
 
         } catch (SQLException e) {
-            System.err.println("Erro ao exluir um produto"+ e.getMessage());
+            System.err.println("Erro ao excluir um produto"+ e.getMessage());
         }
 
     }
@@ -41,7 +41,7 @@ public class ProdutoDao {
               
         }
     }
-    private void inserirProduto (Produto produto) {
+    public void inserirProduto (Produto produto) {
         var sql = "insert into produto (nome, marca_id, valor) values (?,?,?)";
         
         try (var statement= conn.prepareStatement(sql)) {

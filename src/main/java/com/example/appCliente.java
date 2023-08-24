@@ -39,7 +39,9 @@ public class appCliente {
         System.out.println("Cliente sexo: " + cliente2.getSexo());
         System.out.println("Cliente Especial: " + cliente2.isEspecial());
         
-
+        if (cliente1.getCidade().equals(cliente2.getCidade())) {
+            System.out.println("Cidade do cliente 1 e cliente 2 iguais");
+        }
 
         if (cliente1.getCpf().equals(cliente2.getCpf())) {
             System.out.println("Cpf cliente 1 e cliente 2 iguais");

@@ -39,6 +39,6 @@ public class appScanner {
         System.out.println("Cliente Especial: " + cliente.isEspecial());
        
 
-      
+        scanner.close();
     }
 }

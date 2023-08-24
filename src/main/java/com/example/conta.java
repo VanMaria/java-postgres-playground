@@ -52,5 +52,14 @@ public class conta {
     public double calculaRendimento (int numero, double taxa) {
         return this.saldo = this.saldo * 1.10;
     }
+    String	recuperaDadosParaImpressao() {
+        String	dados	=	"Titular:	"	+	this.titular;
+        dados	+=	"\nNúmero:	"	+	this.numero;
+        dados	+=	"\nAgência:	"	+	this.agencia;
+        dados	+=	"\nSaldo:	R$"	+	this.saldo;
+        dados	+=	"\nData	de	abertura:	"	+	this.dataDeAbertura;
+        return	dados;
+}
+
     
 }

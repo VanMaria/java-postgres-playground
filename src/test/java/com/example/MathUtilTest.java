@@ -1,10 +1,21 @@
 package com.example;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import org.junit.jupiter.api.Test;
 
 public class MathUtilTest {
+    @Test
+    void testSoma() {
+        int a=6, b=3;
+        int esperado = 9;
+        int obtido = MathUtil.soma(a,b);
+
+        assertEquals(obtido,esperado);
+        System.out.println("teste soma");
+        assertFalse(!(esperado==obtido));
+    }
     @Test
     void testMdcP1Impar() {
         int a=6, b=3 ;
