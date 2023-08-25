@@ -10,6 +10,7 @@ public class EstadoDao {
     }
 
     public EstadoDao(Object conn2) {
+       
     }
 
     public  void Listar(Connection conn) {
