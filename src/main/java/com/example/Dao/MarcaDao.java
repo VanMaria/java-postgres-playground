@@ -12,7 +12,21 @@ public class MarcaDao {
     public MarcaDao (Connection conn) {
         this.conn = conn;
     }
-    
+    public void listar (Connection conn) {
+        var sql = "select * from marca";
+        try (var statement = conn.createStatement()) {
+            var result = statement.executeQuery(sql);
+            while (result.next()) {
+                System.out.printf(" Id: %d Nome: %s \n",
+                result.getInt("id"), result.getString("nome"));
+
+            //    System.out.printf(" Id: %d Nome: %s UF: %s \n", 
+            //    result.getInt("id"), result.getString("nome"),result.getString("uf"));
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao consultar marca"+e.getMessage());
+        }
+    }
     public void excluir(Long id) {
         var sql = "select * from marca where id = ?";
 
